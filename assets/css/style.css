@@ -1,12 +1,41 @@
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&display=swap');
 
-
-
-body {
-    font-family: 'Inter', sans-serif;
+/* CSS variables */
+:root {
+    --primary-font: 'Inter', sans-serif;
+    --secondary-font: 'Macondo', sans-serif;
+    --primary-color: #416a8e;   /*blue*/
+    --secondary-color: #aa9581; /*orange*/
+    --highlight-color: #416a8e; /*blue*/
+    --light-highlight-color:#7a9fc2; /*light blue*/
 }
 
-h1 {
-    font-family: 'Macondo', sans-serif;
+/* Global styles */
+body {
+    font-family: var(--primary-font);
+    /* margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333; */
+}
+
+h1, h2, h3 {
+    font-family: var(--secondary-font); 
+    color: var(--primary-color);
+}
+
+.sub-heading-color {
+    color: var(--highlight-color);
+}
+
+/* grid visualisation CSS for testing */
+
+.container, .row {
+    border: 2px solid black;
+}
+
+.col-12 {
+    border: 2px solid white;
+    background-color: lightgray;
 }
