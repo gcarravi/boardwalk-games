@@ -5,10 +5,10 @@
 :root {
     --primary-font: 'Inter', sans-serif;
     --secondary-font: 'Macondo', sans-serif;
-    --primary-color: #416a8e;   /*blue*/
-    --secondary-color: #aa9581; /*orange*/
-    --highlight-color: #416a8e; /*blue*/
-    --light-highlight-color:#7a9fc2; /*light blue*/
+    --primary-color: #3a2620; /* dark brown */
+    --secondary-color: #aa9581; /* light brown */
+    --highlight-color: #416a8e; /* blue */
+    --highlight-color-light: #7a9fc2; /* light blue */
 }
 
 /* Global styles */
@@ -29,13 +29,22 @@ h1, h2, h3 {
     color: var(--highlight-color);
 }
 
+/* Navbar */
+#navbar {
+    background-color: var(--primary-color);
+}
+
+#navbar .logo {
+    width: 30px;
+}
+
 /* grid visualisation CSS for testing */
 
-.container, .row {
+/* .container, .row {
     border: 2px solid black;
 }
 
 .col-12 {
     border: 2px solid white;
     background-color: lightgray;
-}
+} */
