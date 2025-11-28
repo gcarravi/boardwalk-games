@@ -23,7 +23,14 @@ body {
 h1, h2, h3 {
     font-family: var(--secondary-font); 
     color: var(--primary-color);
+}
+
+h1, h2 {
     text-transform: uppercase;
+}
+
+h2 {
+    margin-bottom: 2rem;
 }
 
 .sub-heading-color {
@@ -48,6 +55,58 @@ h1, h2, h3 {
 
 #header .lead {
     font-family: var(--secondary-font);
+}
+
+
+/* Services */
+#services .card-footer {
+    background-color: transparent;
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+/* This is to create some space in between the cards. The same can be achieved adding mb-3 to each one of the divs in the cards from <div class="col-12 col-md-6 col-xl-3"> to <div class="col-12 col-md-6 col-xl-3 mb-3"> */
+#services .card {   
+    margin-bottom: 1.5rem;
+}
+
+/* #services .card-text {
+    min-height: 120px;
+} */
+
+/* Media queries */
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    /* make all service cards the same height for consistency */
+    /* I had done this with the commented code right above: #services .card-text and seemed to work too */
+    #services .card-body {
+        min-height: 191px;
+    }
+}
+
+/* Large devices (small laptops, 992px and up) */
+@media screen and (min-width: 992px) {
+    /* there is too much space between the text and the card footer with the price, for large screens (992px and onwards). here we are fixing that */
+    #services .card-body {
+        min-height: auto;
+    }
+}
+
+/* xl devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    /* make all service cards the same height for consistency */
+    #services .card-body {
+        min-height: 220px;
+    }
+}
+
+/* xxl devices (larger desktops, 1400px and up) */
+@media screen and (min-width: 1400px) {
+    /* make all service cards the same height for consistency */
+    #services .card-body {
+        min-height: 195px;
+    }
 }
 
 
