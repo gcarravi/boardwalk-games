@@ -78,9 +78,7 @@ h2 {
 }
 
 
-
 /* Footer / contact */
-
 #contact {
     background-color: var(--primary-color);
     color: white;
@@ -125,10 +123,6 @@ h2 {
     #services .card-body {
         min-height: 191px;
     }
-
-    /* #new-games .card-text {
-        min-height: 120px;
-    } */
 }
 
 /* Large devices (small laptops, 992px and up) */
@@ -154,7 +148,6 @@ h2 {
         min-height: 195px;
     }
 }
-
 
 
 /* grid visualisation CSS for testing */
