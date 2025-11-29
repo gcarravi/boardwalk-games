@@ -27,7 +27,8 @@
 <body class="d-flex flex-column min-vh-100">
 
     <!-- Navigation -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">  <!--fixed-top to fix the navbar to the top so it is always accesible-->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+        <!--fixed-top to fix the navbar to the top so it is always accesible-->
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="assets/images/logo-sm-white.png" alt="Boardwalk Games logo" class="logo">
@@ -216,7 +217,7 @@
                         Outside scheduled events, our shop remains open for regular play. Join us anytime to discover
                         new games and meet fellow enthusiasts.
                     </p>
-                </div>    
+                </div>
                 <div class="col-12 col-xl-6">
                     <table class="table table-hover">
                         <thead>
@@ -336,6 +337,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+    <script>
+        document
+            .querySelectorAll(".navbar-collapse .nav-link")
+            .forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    let section = document.querySelector(e.target.getAttribute("href"));
+                    if (section) {
+                        e.preventDefault(); // Prevent default anchor click behavior
+                        let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
+                        window.scroll({
+                            top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                            behavior: "smooth",
+                        });
+                        document
+                            .querySelector(".navbar-collapse")
+                            .classList.remove("show"); // Collapse navbar
+                    }
+                });
+            });
+    </script>
 </body>
 
 </html>
